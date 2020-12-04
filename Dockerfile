@@ -6,7 +6,7 @@ RUN apt-get update && apt-get install -y \
   curl  
 
 # Download and install library
-# RUN R -e "install.packages(c('shiny'))"
+RUN R -e "install.packages(c('shiny'))"
 
 # copy the app to the image COPY shinyapps /srv/shiny-server/
 COPY . /srv/shiny-server/
